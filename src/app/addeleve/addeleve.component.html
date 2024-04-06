@@ -1,0 +1,37 @@
+<div class="container col-md-6 border" style="margin-top: -600px; margin-left:35%; border-radius: 10px;"> 
+    <div class="panel panel-info border" style="border-radius: 10px; ">
+        <div class="panel panel-heading" style="background:white"><h2 style="color: black; text-align: center;">Ajout élève</h2></div>
+        <div class="panel-body" style="border-radius: 10px; background: white;">
+            <form #eleve= "ngForm" (ngSubmit)="onsubmit(eleve)">
+                <div class="form-group">
+                    <label class="control-label" >Nom</label>
+                    <input type="text" required="required" class="form-control" name="nom" ngModel>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Prenom</label>
+                    <input type="text" required="required" class="form-control" name="prenom" ngModel>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" >DATE</label>
+                    <input type="date" required="required" class="form-control" name="dateNaissance" ngModel>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">GENRE</label>
+                    <br>
+                    Masculin<input type="radio" value="M" name="sexe" ngModel> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Feminin<input type="radio" value="F" name="sexe" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="" class="control-label" >Classe</label>
+                    <select name="Classe" required="required" class="form-control" id="" ngModel>
+                        <option value="" ngModel>choissiez</option>
+                        
+                    </select>
+                </div>
+                <p>&nbsp;</p>
+                <button class="btn btn-danger" type="reset" name="an">ANNULER</button>
+                <button class="btn btn-success" type="submit" name="aj">AJOUTER</button>
+            </form>
+        </div>
+    </div>
+</div>
