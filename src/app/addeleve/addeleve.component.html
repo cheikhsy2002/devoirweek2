@@ -1,30 +1,41 @@
-<div class="container col-md-6 border" style="margin-top: -600px; margin-left:35%; border-radius: 10px;"> 
+<div class="container col-md-6 border" style="margin-top: -650px; margin-left:35%; border-radius: 10px;"> 
     <div class="panel panel-info border" style="border-radius: 10px; ">
         <div class="panel panel-heading" style="background:white"><h2 style="color: black; text-align: center;">Ajout élève</h2></div>
         <div class="panel-body" style="border-radius: 10px; background: white;">
-            <form #eleve= "ngForm" (ngSubmit)="onsubmit(eleve)">
+            <form #form= "ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label class="control-label" >matricule</label>
+                    <input type="text" required class="form-control" name="matricule"[(ngModel)]="matricule">
+                </div>
+                &nbsp;
                 <div class="form-group">
                     <label class="control-label" >Nom</label>
-                    <input type="text" required="required" class="form-control" name="nom" ngModel>
+                    <input type="text" required="required" class="form-control" name="nom"[(ngModel)]="nom">
                 </div>
+                &nbsp;
                 <div class="form-group">
                     <label class="control-label">Prenom</label>
-                    <input type="text" required="required" class="form-control" name="prenom" ngModel>
+                    <input type="text" required="required" class="form-control" name="prenom" [(ngModel)]="prenom">
                 </div>
+                &nbsp;
                 <div class="form-group">
-                    <label class="control-label" >DATE</label>
-                    <input type="date" required="required" class="form-control" name="dateNaissance" ngModel>
+                    <label class="control-label" >DATE de Naissance</label>
+                    <input type="date" required="required" class="form-control" name="dateNaissance" [(ngModel)]="dateNaissance">
                 </div>
+                &nbsp;
                 <div class="form-group">
                     <label class="control-label">GENRE</label>
                     <br>
-                    Masculin<input type="radio" value="M" name="sexe" ngModel> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    Feminin<input type="radio" value="F" name="sexe" ngModel>
+                    Masculin &nbsp; <input type="radio" value="M" name="sexe" [(ngModel)]="sexe"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Feminin &nbsp; <input type="radio" value="F" name="sexe" [(ngModel)]="sexe">
                 </div>
+                &nbsp;
                 <div class="form-group">
                     <label for="" class="control-label" >Classe</label>
-                    <select name="Classe" required="required" class="form-control" id="" ngModel>
-                        <option value="" ngModel>choissiez</option>
+                    <select name="classe" required="required" class="form-control" id="" [(ngModel)]="classe">
+                        <option value="choix">choissiez</option>
+                        <option value="L1RI">L1RI</option>
+                        <option value="L2RI">L2RI</option>
                         
                     </select>
                 </div>
@@ -35,3 +46,36 @@
         </div>
     </div>
 </div>
+
+
+<div class="container col-md-6 " style="margin-top: 100px; margin-left: 35%;"  >
+    <div class="panel panel-info">
+        <div class="panel-heading" style="color: white; text-align: center;"><h2>Registre de Naissance</h2></div>
+        <div class="panel-body">
+            <table class="table table-condensed table-novel table-hover" style="color: white;">
+                <tr style="background-color: blue;">
+                    <th>libelle</th>
+                    <th>niveau</th>
+                    <th>filiere</th>
+                    <th>Action1</th>
+                    <th>Action2</th>
+                    <th>Action3</th>
+                    <th>Action4</th>
+                </tr>
+                <tr style="background-color: gray;" *ngFor="let el of eleves">
+                    <td> {{ el.matricule}} </td>
+                    <td>{{ el.nom }}</td>
+                    <td>{{ el.prenom }}</td>
+                    <td>{{ el.datenaissance }}</td>
+                    <td>{{ el.sexe }}</td>
+                    <td>{{ el.classe }}</td>
+                    <td>bouton supprimer</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<style>
+    .spacer{
+    margin-top: 60px;}
+</style>

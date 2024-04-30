@@ -36,10 +36,10 @@
                     <th>Action1</th>
                     <th>Action2</th>
                 </tr>
-                <tr style="background-color: gray;">
-                    <td> {{ classe.libelle}} </td>
-                    <td>{{ classe.filiere }}</td>
-                    <td>{{ classe.niveau }}</td>
+                <tr style="background-color: gray;" *ngFor="let cla of classes">
+                    <td> {{ cla.libelle}} </td>
+                    <td>{{ cla.filiere }}</td>
+                    <td>{{ cla.niveau }}</td>
                     <td>{{ msg }}</td>
                     <td>{{ msg }}</td>
                 </tr>

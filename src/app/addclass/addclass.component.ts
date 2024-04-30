@@ -10,19 +10,13 @@ import { NgForm } from '@angular/forms';
 })
 export class AddclassComponent{
 
-  public classes!: classe[];
+  public classes: classe[] = [];
   public classe!:classe;
   public libelle! : string;
   public niveau! : string;
   public filiere! : string;
   msg: string =  "bonjour";
   constructor() {
-  }
-  ngOninit(){
-    this.classe.filiere =" Ri";
-    this.classe.libelle = "GL";
-    this.classe.niveau = "L1";
-    
   }
   onSubmit(){
     this.classe = addc(this.libelle, this.niveau, this.filiere); 
