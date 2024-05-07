@@ -1,6 +1,6 @@
 <div class="container col-md-6 border" style="margin-top: -650px; margin-left:35%; border-radius: 10px;"> 
     <div class="panel panel-info border" style="border-radius: 10px; ">
-        <div class="panel panel-heading" style="background:white"><h2 style="color: black; text-align: center;">Ajout élève</h2></div>
+        <div class="panel panel-heading" style="background:white"><h2 style="color: blue; text-align: center;">Ajout Elève</h2></div>
         <div class="panel-body" style="border-radius: 10px; background: white;">
             <form #form= "ngForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
@@ -40,7 +40,7 @@
                     </select>
                 </div>
                 <p>&nbsp;</p>
-                <button class="btn btn-danger" type="reset" name="an">ANNULER</button>
+                <button class="btn btn-danger" type="reset" name="an">ANNULER</button> &nbsp;
                 <button class="btn btn-success" type="submit" name="aj">AJOUTER</button>
             </form>
         </div>
@@ -48,28 +48,30 @@
 </div>
 
 
-<div class="container col-md-6 " style="margin-top: 100px; margin-left: 35%;"  >
-    <div class="panel panel-info">
-        <div class="panel-heading" style="color: white; text-align: center;"><h2>Registre de Naissance</h2></div>
+<div class="container col-md-8 " style="margin-top: 100px; margin-left: 28%;"  >
+    <div class="panel panel-info border" style="border-radius: 10px;">
+        <div class="panel-heading" style="color: blue; text-align: center;"><h2>Liste Elève</h2></div>
         <div class="panel-body">
             <table class="table table-condensed table-novel table-hover" style="color: white;">
-                <tr style="background-color: blue;">
-                    <th>libelle</th>
-                    <th>niveau</th>
-                    <th>filiere</th>
-                    <th>Action1</th>
-                    <th>Action2</th>
-                    <th>Action3</th>
-                    <th>Action4</th>
+                <tr style="background-color: blue; text-align: center;">
+                    <th>Matricule</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Date de Naissance</th>
+                    <th>Sexe</th>
+                    <th>Classe</th>
+                    <th>Action 1</th>
+                    <th>Action 2</th>
                 </tr>
-                <tr style="background-color: gray;" *ngFor="let el of eleves">
+                <tr style="background-color: rgb(243, 233, 233); color: black; text-align: center;" *ngFor="let el of eleves">
                     <td> {{ el.matricule}} </td>
                     <td>{{ el.nom }}</td>
                     <td>{{ el.prenom }}</td>
                     <td>{{ el.datenaissance }}</td>
                     <td>{{ el.sexe }}</td>
                     <td>{{ el.classe }}</td>
-                    <td>bouton supprimer</td>
+                    <td><a href='' class='btn btn-primary' style="color: white; background-color: darkblue;" >Modifier</a></td>
+                    <td><a class='btn btn-danger'style="color: white; background-color: red;" href=''>suppimer</a></td>
                 </tr>
             </table>
         </div>

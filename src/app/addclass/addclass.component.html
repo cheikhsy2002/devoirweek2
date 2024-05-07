@@ -1,6 +1,6 @@
 <div class="container col-md-6 border" style="margin-top: -650px; margin-left:35%; border-radius: 10px;"> 
     <div class="panel panel-info border" style="border-radius: 10px; ">
-        <div class="panel panel-heading" style="background:white"><h2 style="color: black; text-align: center;">Ajout Classe</h2></div>
+        <div class="panel panel-heading" style="background:white"><h2 style="color: blue; text-align: center;">Ajout Classe</h2></div>
         <div class="panel-body" style="border-radius: 10px; background: white;">
             <form #form= "ngForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
@@ -16,7 +16,7 @@
                     <input type="text"  class="form-control" required="required" name="filiere" [(ngModel)]="filiere">
                 </div>
                 <p>&nbsp;</p>
-                <button class="btn btn-danger" type="reset">ANNULER</button>
+                <button class="btn btn-danger" type="reset">ANNULER</button> &nbsp;
                 <button class="btn btn-success" type="submit">AJOUTER</button>
             </form>
         </div>
@@ -26,7 +26,7 @@
 
 <div class="container col-md-6 " style="margin-top: 100px; margin-left: 35%;"  >
     <div class="panel panel-info">
-        <div class="panel-heading" style="color: white; text-align: center;"><h2>Registre de Naissance</h2></div>
+        <div class="panel-heading" style="color: blue; text-align: center;"><h2>Liste Classe</h2></div>
         <div class="panel-body">
             <table class="table table-condensed table-novel table-hover" style="color: white;">
                 <tr style="background-color: blue;">
@@ -40,8 +40,8 @@
                     <td> {{ cla.libelle}} </td>
                     <td>{{ cla.filiere }}</td>
                     <td>{{ cla.niveau }}</td>
-                    <td>{{ msg }}</td>
-                    <td>{{ msg }}</td>
+                    <td><a href='' class='btn btn-primary' style="color: white; background-color: darkblue;" >Modifier</a></td>
+                    <td><a class='btn btn-danger'style="color: white; background-color: red;" href=''>suppimer</a></td>
                 </tr>
             </table>
         </div>
