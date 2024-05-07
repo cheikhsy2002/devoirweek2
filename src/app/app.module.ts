@@ -7,12 +7,14 @@ import { AddclassComponent } from './addclass/addclass.component';
 import { AddeleveComponent } from './addeleve/addeleve.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddclassComponent,
     AddeleveComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
